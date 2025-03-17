@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR-Clean</title>
+</head>
+<body>
+   <h2>Calculadora de Rescisão Trabalhista</h2>
+
+   <label for="salarioBruto">Salário bruto</label>
+   <input type="number" id="salarioBruto">
+
+    <label for="dataDeContratacao">Data de contratação</label>
+    <input type="date" id="dataDeContratacao">
+
+    <label for="dataDeDemissao">Data de Demissão</label>
+    <input type="date" id="dataDeDemissao">
+
+    <br><br>
+
+    <label for="motivo">Motivo</label>
+    <select id="motivo">
+        <option value="demissaoComumAcordo">Demissão de comum acordo</option>
+        <option value="dispensaSemJustaCausa">Dispensa sem justa causa</option>
+        <option value="dispensaComJustaCausa">Dispensa com justa causa</option>
+        <option value="pedidoDemissao">Pedido de demissão</option>
+        <option value="expNoPrazo">Encerramento de contrato de experiência no prazo</option>
+        <option value="expAntesPrazo">Encerramento de contrato de experiência antes prazo</option>
+        <option value="aposentadoria">Aposentadoria do empregado</option>
+        <option value="falecimento">Falecimento do empregador</option>
+    </select>
+
+    <br><br>
+
+    <label for="avisoPrevio">Aviso Prévio</label>
+     <select id="avisoPrevio">
+        <option value="trabalhado">Trabalhado</option>
+        <option value="indenizado">Indenizado pelo empregador</option>
+        <option value="descumprido">Não cumprido pelo empregado</option>
+        <option value="dispensado">Dispensado</option>
+      </select>
+
+    <br><br>
+    <input class="checked-box" type="checkbox" id="unused-checkbox">
+      
+    Possui férias adquiridas no ano anterior?
+
+    <br><br>
+    <label for="numeroDeDependentes">Número de dependentes</label>
+    <input type="number" id="numeroDeDependentes">
+      <br><br>
+
+   <label for="saldoFgts">Saldo FGTS</label>
+    <input type="number" id="saldoFgts">
+    <br><br>
+
+   <label for="dataDeContratacao">Data de contratação</label>
+   <input type="date" id="dataDeContracao">
+
+   <label class="feriasVencidas">Férias vencidas</label>
+   <input type="date" id="feriasVencidas">
+
+   <label class="diasDeFerias">Dias</label>
+   <input type="date" id="diasDeFerias">
+
+   <br><br>
+
+    <button type="submit" id="calcular" class="button">Calcular</button>
+    &nbsp;
+
+    <button onclick="limpar()">Limpar</button>
+
+    <h3>Resultado: <span id="resultado">Resultado</span></h3>
+
+</body>
+</html>
