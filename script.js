@@ -42,7 +42,7 @@
         }
 
         function total() {
-           var total = saldoDeSalario() + avisoPrevioIndenizado();
+           var total = saldoDeSalario() + avisoPrevioIndenizado() + ferias() ;
            document.getElementById("total").innerText = total;
         }
 
