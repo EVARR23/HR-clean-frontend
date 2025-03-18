@@ -48,16 +48,5 @@
            document.getElementById("total").innerText = total;
         }
 
-//        function ferias() {
-//          let salarioBruto = document.getElementById("salarioBruto").value;
-//          let diasDeFerias = document.getElementById("diasDeFerias").value;
-//          let salarioBruto = document.getElementById("salarioBruto").value;
-//            alert(salarioBruto);
-//
-//          var dtDiasDeFerias = new Date(diasDeFerias);
-//          var dtContratacao = new Date(dataDeContratacao);
-//
-//          let saldoFerias = salarioBruto / 30 * diasDeFerias + salarioBruto /30 * 25 * 1/3;
-//
-//        }
+
 

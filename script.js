@@ -1,10 +1,9 @@
 
      function calcular() {
-            saldoDeSalario();
-            avisoPrevioIndenizado();
-            ferias();
-
-            total();
+         saldoDeSalario();
+         avisoPrevioIndenizado();
+         ferias();
+         total();
      }
 
      function saldoDeSalario() {
@@ -12,7 +11,6 @@
                 let salarioBruto = document.getElementById("salarioBruto").value;
                 let dataDeDemissao = document.getElementById("dataDeDemissao").value;
                 var dtDemissao = new Date(dataDeDemissao);
-                alert((dtDemissao.getDate() + 1));
 
                 let saldoSalario = salarioBruto / 30 * (dtDemissao.getDate() + 1);
 
@@ -48,6 +46,20 @@
            document.getElementById("total").innerText = total;
         }
 
+
+        function ferias() {
+
+          let salarioBruto = document.getElementById("salarioBruto").value;
+          let diasDeFerias = document.getElementById("diasDeFerias").value;
+
+          let ferias = salarioBruto / 30 * diasDeFerias + salarioBruto /30 * diasDeFerias * 1/3;
+
+         document.getElementById("ferias").innerText = ferias;
+//             alert("saldoFerias");
+
+             return ferias;
+
+        }
 
 
 
