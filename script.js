@@ -4,7 +4,9 @@
          avisoPrevioIndenizado();
          ferias();
          total();
+         decimoTerceiroProporcional();
      }
+
 
      function saldoDeSalario() {
 
@@ -55,11 +57,22 @@
           let ferias = salarioBruto / 30 * diasDeFerias + salarioBruto /30 * diasDeFerias * 1/3;
 
          document.getElementById("ferias").innerText = ferias;
-//             alert("saldoFerias");
+
 
              return ferias;
 
         }
 
+        function decimoTerceiroProporcional() {
 
+          let salarioBruto = document.getElementById("salarioBruto").value;
+          let mesesTrabalhados = document.getElementById("mesesTrabalhados").value;
+
+          let decimoTerceiroProporcional = salarioBruto / 12 * mesesTrabalhados;
+
+
+            document.getElementById("decimoTerceiroProporcional").innerText = decimoTerceiroProporcional;
+
+            return decimoTerceiroProporcional;
+        }
 
