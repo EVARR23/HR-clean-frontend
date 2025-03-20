@@ -5,20 +5,21 @@
          ferias();
          total();
          decimoTerceiroProporcional();
+         fgtsSaqueDisponivel();
      }
 
 
      function saldoDeSalario() {
 
-                let salarioBruto = document.getElementById("salarioBruto").value;
-                let dataDeDemissao = document.getElementById("dataDeDemissao").value;
-                var dtDemissao = new Date(dataDeDemissao);
+                    let salarioBruto = document.getElementById("salarioBruto").value;
+                    let dataDeDemissao = document.getElementById("dataDeDemissao").value;
+                    var dtDemissao = new Date(dataDeDemissao);
 
-                let saldoSalario = salarioBruto / 30 * (dtDemissao.getDate() + 1);
+                    let saldoSalario = salarioBruto / 30 * (dtDemissao.getDate() + 1);
 
-                document.getElementById("saldoSalario").innerText = saldoSalario;
+                    document.getElementById("saldoSalario").innerText = saldoSalario;
 
-                return saldoSalario;
+                    return saldoSalario;
     }
 
          function avisoPrevioIndenizado() {
@@ -44,35 +45,55 @@
         }
 
         function total() {
-           var total = saldoDeSalario() + avisoPrevioIndenizado() + ferias() ;
+           var total = saldoDeSalario() + avisoPrevioIndenizado() + ferias() + decimoTerceiroProporcional() + fgtsSaqueDisponivel();
            document.getElementById("total").innerText = total;
         }
 
 
         function ferias() {
 
-          let salarioBruto = document.getElementById("salarioBruto").value;
-          let diasDeFerias = document.getElementById("diasDeFerias").value;
+                      let salarioBruto = document.getElementById("salarioBruto").value;
+                      let diasDeFerias = document.getElementById("diasDeFerias").value;
 
-          let ferias = salarioBruto / 30 * diasDeFerias + salarioBruto /30 * diasDeFerias * 1/3;
+                      let ferias = salarioBruto / 30 * diasDeFerias + salarioBruto /30 * diasDeFerias * 1/3;
 
-         document.getElementById("ferias").innerText = ferias;
+                       document.getElementById("ferias").innerText = ferias;
 
-
-             return ferias;
+                       return ferias;
 
         }
 
+
         function decimoTerceiroProporcional() {
 
-          let salarioBruto = document.getElementById("salarioBruto").value;
-          let mesesTrabalhados = document.getElementById("mesesTrabalhados").value;
+                      let salarioBruto = document.getElementById("salarioBruto").value;
+                      let mesesTrabalhados = document.getElementById("mesesTrabalhados").value;
 
-          let decimoTerceiroProporcional = salarioBruto / 12 * mesesTrabalhados;
+                      let decimoTerceiroProporcional = salarioBruto / 12 * mesesTrabalhados;
 
 
-            document.getElementById("decimoTerceiroProporcional").innerText = decimoTerceiroProporcional;
+                       document.getElementById("decimoTerceiroProporcional").innerText = decimoTerceiroProporcional;
 
-            return decimoTerceiroProporcional;
+                       return decimoTerceiroProporcional;
+        }
+
+
+        function fgtsSaqueDisponivel() {
+
+                       let salarioBruto = document.getElementById("salarioBruto").value;
+                       let saldoFgts = document.getElementById("saldoFgts").value;
+
+                       let fgtsSaqueDisponivel = salarioBruto * 0.40 * 13 * saldoFgts;
+
+
+                        document.getElementById("fgtsSaqueDisponivel").innerText = fgtsSaqueDisponivel;
+
+                        return fgtsSaqueDisponivel;
+
+
+//        alert("teste");
+
+
+
         }
 
