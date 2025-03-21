@@ -91,7 +91,7 @@
                         return fgtsSaqueDisponivel;
 
 
-//        alert("teste");
+
 
 
 
